@@ -73,13 +73,16 @@
           @before-close="beforeClose">
 
     <div class="sugerir-modal-content">
-      <h3> Realizar Sugerencia </h3>
+      <h3> Realizar Resolución </h3>
       <textarea name="" id="" cols="100" rows="15"></textarea>
+       <button class="registrarR"> Aceptar </button>
     </div>
+
+    
 
   </modal>
 
-   <!-- MODAL REGISTRAR -->
+   <!-- MODAL REGISTRAR RECLAMO -->
 
     <modal name="registrar-modal"
           transition="nice-modal-fade"
@@ -102,7 +105,7 @@
 
        <form class="formRegistro" > 
         <div class="row">
-            <div class="col-md form-group">
+            <div class="col-md form-group col-2b">
                 <label for="clasificacion" class="form-control-label">Clasificación  </label>
                 <select  id="clasificacion" name="clasificacion" class="form-control" required>
                     <option selected disabled hidden></option>
@@ -114,9 +117,9 @@
                 </select>
             </div>
 
-            <div class="col-md form-group">
+            <div class="col-md form-group col-2b">
                 <label for="rut" class="form-control-label">Día / Mes / Año</label>
-                <input  name="rut"  class="form-control inputRO" readonly>
+                <input  name="rut"  class="form-control" required>
             </div>
         </div>
 
@@ -129,16 +132,58 @@
             <label>Contenido</label>
             <textarea class="form-control" id="razones" rows="10" required></textarea>
         </div>       
-    
-
     </form>
 
-
+    <button class="registrarR" > Ingresar </button>
     </div>
 
   </modal>
 
-  <!-- MODAL FECHAS -->
+
+     <!-- MODAL VER RECLAMO -->
+
+    <modal name="verReclamo-modal"
+          transition="nice-modal-fade"
+          classes="demo-modal-class"
+          :min-width="200"
+          :min-height="200"
+          :pivot-y="0.5"
+          :adaptive="true"
+          :scrollable="true"
+          :reset="true"
+          width="60%"
+          height="auto"
+          @before-open="beforeOpen"
+          @opened="opened"
+          @closed="closed"
+          @before-close="beforeClose">
+
+    <div class="verReclamo-modal-content">
+      <h3> Título </h3>
+
+       <form class="formRegistro" > 
+        <div class="row">
+            <div class="col-md form-group col-2b">
+                <label for="clasificacion" class="form-control-label">Clasificación  </label>
+                <input  name="rut"  class="form-control" readonly>
+            </div>
+
+            <div class="col-md form-group col-2b">
+                <label for="rut" class="form-control-label">Día / Mes / Año</label>
+                <input  name="rut"  class="form-control" readonly>
+            </div>
+        </div>
+
+        <div class="row col-md form-group">
+            <label>Contenido</label>
+            <textarea class="form-control" id="razones" rows="10" readonly></textarea>
+        </div>       
+    </form>
+    </div>
+
+  </modal>
+
+  <!-- MODAL FLUJO RECLAMO -->
 
   <modal name="fechas-modal"
           transition="nice-modal-fade"
@@ -162,6 +207,36 @@
       <div> <label> Servicio al cliente: En revisión</label> </div>
       <div> <label> Comisión: Pendiente</label> </div>
     </div>
+
+  </modal>
+
+
+    <!-- MODAL CAMBIAR ESTADO -->
+
+  <modal name="cambiarFlujo-modal"
+          transition="nice-modal-fade"
+          classes="demo-modal-class"
+          :min-width="200"
+          :min-height="200"
+          :pivot-y="0.5"
+          :adaptive="true"
+          :scrollable="true"
+          :reset="true"
+          width="60%"
+          height="auto"
+          @before-open="beforeOpen"
+          @opened="opened"
+          @closed="closed"
+          @before-close="beforeClose">
+
+    <div class="cambiarFlujo-modal-content">
+      <h3> Flujo de Reclamo </h3>
+      <div> <label> Fecha de Ingreso: 22/10/2018</label> </div>
+      <div> <label> Servicio al cliente: En revisión</label> </div>
+      <div> <label> Comisión: Pendiente</label> </div>
+    </div>
+
+    <button class="registrarR" > Continuar Flujo </button>
 
   </modal>
 

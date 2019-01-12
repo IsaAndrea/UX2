@@ -8,7 +8,7 @@
     <h1>{{title}}</h1>
 
 	<div class="editarDocumento">
-        <button name="enviar" title="Fechas" @click="$modal.show('fechas-modal')"> <img src="./img/calendario.png"/> </button> <div>  <label> Cambiar </label> <br/> <label> Flujo de trámite </label>  </div>
+        <button name="enviar" title="Fechas" @click="$modal.show('cambiarFlujo-modal')"> <img src="./img/calendario.png"/> </button> <div>  <label> Cambiar </label> <br/> <label> Flujo de trámite </label>  </div>
         <button name="enviar" title="Sugerir" @click="$modal.show('sugerir-modal')"> <img src="./img/resultado.png"/> </button> <div>  <label> Realizar </label> <br/> <label> Resolución </label> </div>
    </div>
 
@@ -27,12 +27,12 @@
 
         <div class="row col-md form-group">
 	    	  <label>Título</label>
-          <textarea class="form-control" id="solicitud" rows="3" readonly></textarea>
+          <textarea class="form-control inputRO" id="solicitud" rows="3" readonly></textarea>
         </div>
      
         <div class="row col-md form-group">
             <label>Contenido</label>
-            <textarea class="form-control" id="razones" rows="10" readonly></textarea>
+            <textarea class="form-control inputRO" id="razones" rows="10" readonly></textarea>
         </div>       
 
   	  </form>
