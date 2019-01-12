@@ -1,12 +1,12 @@
 //////////   CUERPO   //////////
 
 body {
-  color:#37495F;
+  color:white;
   position: relative;
   margin: 0;
   padding-bottom: 1rem;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  background-color: lighten(#EAEDED, 6%);
+  background-color: lighten(#323232, 20%);
 }
 
 .center {
@@ -71,7 +71,8 @@ header{
   line-height:1.15;
   -ms-text-size-adjust:100%;
   -webkit-text-size-adjust:100%;
-  background-color: #EAEDED;
+//  background-color: #EAEDED;
+  background-color: lighten(#323232, 6%);
   padding: 15px;
   border-radius: 30px 30px 30px 30px;
   margin-bottom: 30px;
@@ -120,7 +121,7 @@ header{
 
 .listaDocumentos{
   border:none; 
-  background-color: #EAEDED;
+  background-color: lighten(#323232, 6%);
   padding: 15px;
   border-radius: 30px 30px 30px 30px;
   margin-bottom: 30px;
@@ -131,22 +132,24 @@ header{
       border:none; 
       padding-bottom: 20px; 
       padding-left: 5px;
+      color: #FF4063;
     }
   }
   tbody{
     th{
+      font-weight: normal;
       text-align: left;  
       padding-left: 5px; 
       border-bottom: 1px solid #CACFD2; 
-      color:#616A6B;
+      color:white;
     }
   }
   button{
-    background: #CCD1D1;
+    background: lighten(#323232, 20%);;
     width: 40px; 
     height: 40px;
     border-style: solid;
-    border-color: #CCD1D1;
+    border-color: lighten(#323232, 20%);
     padding: 2px;
     border-radius: 10px;
     margin-bottom: 2.5px;
@@ -163,6 +166,7 @@ header{
 
 
 
+
 //////////   BUSCADOR DOCUMENTO   //////////
 
 .search {
@@ -171,17 +175,17 @@ header{
       padding: 12px 24px;
       background-color: transparent;
       font-size: 14px;
-      color: #575756;
+      color: white;
       background-image: url(http://mihaeltomic.com/codepen/input-search/ic_search_black_24px.svg);
       background-repeat: no-repeat;
       background-size: 25px 25px;
       background-position: 95% center;
       border-radius: 50px;
-      border: 1px solid #575756;
+      border: 1px solid white;
       transition: all 250ms ease-in-out;
       margin-bottom: 20px;
       &::placeholder {
-          color: color(#575756 a(0.8));
+          color: white
       }
       
       &:hover,
@@ -189,7 +193,7 @@ header{
           padding: 12px 0;
           outline: 0;
           border: 1px solid transparent;
-          border-bottom: 1px solid #575756;
+          border-bottom: 1px solid white;
           border-radius: 0;
           background-position: 100% center;
       }
@@ -324,7 +328,7 @@ header{
 }
 .demo-modal-class {
   border-radius: 10px;
-  background: #F7F7F7;
+  background-color: lighten(#323232, 30%);;
   box-shadow: 5px 5px 30px 0px rgba(46,61,73, 0.6);
   padding-bottom: 40px;
   padding-top: 20px;
@@ -363,7 +367,7 @@ header{
 
 .registrarDocumento{
   position: absolute;
-  top: 270px;
+  top: 180px;
   right: 150px;
   width: 200px;
   height: 50px;
@@ -372,9 +376,9 @@ header{
   border-radius: 10px;
   border-style: solid;
   font-size:100%;
-  color:#292b2c;
-  background-color:#CCD1D1;
-  border-color: lighten(#3D66C9   , 10%)
+  color:white;
+  background-color:#822E81;
+  border-color: lighten(#822E81   , 10%)
 }
 
 
