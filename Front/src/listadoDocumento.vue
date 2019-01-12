@@ -35,7 +35,6 @@
                 <th> {{ claim.reason }} </th>
                 <th> {{ claim.date }} </th>
                 <th> {{ claim.category }} </th>
-                <th> <button @click="$modal.show('fechas-modal')" class="botonAccion" name="enviar" title="Fechas"> <img src="./img/calendario.png"/> </button> </th>
                 <th> <button @click="visualizar()" class="botonAccion" name="enviar" title="Visualizar"> <img src="./img/documento.png"/> </button> </th>
                 <th> <button @click="$modal.show('resolucion-modal')" class="botonAccion" name="enviar" title="Editar"> <img src="./img/resultado.png"/> </button> </th>
             </tr>
