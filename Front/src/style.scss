@@ -365,7 +365,7 @@ header{
 
 
 
-////////// MODAL REGISTRO SOLICITUD   //////////
+////////// MODAL REGISTRO RECLAMO   //////////
 
 .registrar-modal-content{
   text-align: left;
@@ -374,6 +374,14 @@ header{
   button{
     margin-left: 20px;
   }
+}
+
+////////// MODAL VER RECLAMO   //////////
+
+.verReclamo-modal-content{
+  text-align: left;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .registrarDocumento{
