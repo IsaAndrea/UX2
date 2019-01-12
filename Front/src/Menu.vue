@@ -9,6 +9,7 @@
 
       <nav>
         <a href="#/listado">Reclamos</a>
+        <a href="#/reclamos">ReclamosF</a>
       </nav>
     </header>
 

@@ -78,13 +78,14 @@ header{
   margin-bottom: 30px;
 
   .row{display:-webkit-box; display:-webkit-flex ;display:-ms-flexbox; display:flex; -webkit-flex-wrap:wrap; -ms-flex-wrap:wrap; flex-wrap:wrap; margin-right:15px; margin-bottom:1rem;}
-  .col-md{padding-left:25px}
+  .col-md{padding-left:25px; }
   input{overflow:visible; }
   .form-control{display:block; width:100%; padding:.5rem .75rem; font-size:1rem; line-height:1.25; color:#464a4c;background-color:#fff;background-image:none;-webkit-background-clip:padding-box;background-clip:padding-box;border:1px solid rgba(0,0,0,.15);border-radius:.25rem;-webkit-transition:border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;transition:border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;-o-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s}
   .form-control-label{margin-bottom:0; vertical-align:middle}
   .form-control::-ms-expand{background-color:transparent; border:0}
   label{display:inline-block; margin-bottom:.5rem; float:left}
   .inputRO{background-color: #CCD1D1;}
+  .col-2{width: 47.5%}
 }
 
 .mt-1{
@@ -145,7 +146,7 @@ header{
     }
   }
   button{
-    background: lighten(#323232, 20%);;
+    background: lighten(#323232, 20%);
     width: 40px; 
     height: 40px;
     border-style: solid;
