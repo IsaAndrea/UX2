@@ -13,9 +13,6 @@
         
    </div>
 
- 
-
-
     <div class="search">
         <input class="search__input" type="text" placeholder="Número de Reclamo">
     </div>
@@ -26,61 +23,25 @@
         <thead>
             <tr>
                 <th class="nro"> Nro. </th>
-                <th class="tipo"> Tipo </th>
+                <th class="tipo"> Motivo </th>
                 <th class="semAñ"> Fecha </th>
-                <th class="motivo"> Motivo </th>  
+                <th class="motivo"> Categoria </th>  
             </tr>
         </thead> 
 
-        <tbody >
+        <tbody v-for="(claim, index) in claims">
             <tr>
-                <th> 1 </th>
-                <th > Telefonía Móvil </th>
-                <th> 22/10/2018 </th>
-                <th> Cobro indebido </th>
+                <th> {{ index+1 }} </th>
+                <th> {{ claim.reason }} </th>
+                <th> {{ claim.date }} </th>
+                <th> {{ claim.category }} </th>
                 <th> <button @click="$modal.show('fechas-modal')" class="botonAccion" name="enviar" title="Fechas"> <img src="./img/calendario.png"/> </button> </th>
                 <th> <button @click="visualizar()" class="botonAccion" name="enviar" title="Visualizar"> <img src="./img/documento.png"/> </button> </th>
                 <th> <button @click="$modal.show('resolucion-modal')" class="botonAccion" name="enviar" title="Editar"> <img src="./img/resultado.png"/> </button> </th>
-            </tr>
-
-            <tr>
-                <th> 2 </th>
-                <th > Hogar </th>
-                <th> 23/11/2018 </th>
-                <th> Televisión por cable sin señal </th>
-                <th> <button @click="$modal.show('fechas-modal')" class="botonAccion" name="enviar" title="Fechas"> <img src="./img/calendario.png"/> </button> </th>
-                <th> <button @click="visualizar()" class="botonAccion" name="enviar" title="Visualizar"> <img src="./img/documento.png"/> </button> </th>
-                <th> <button @click="$modal.show('resolucion-modal')" class="botonAccion" name="enviar" title="Editar"> <img src="./img/resultado.png"/> </button> </th>
-            </tr>
-
-            <tr>
-                <th> 3 </th>
-                <th > Telefonía </th>
-                <th> 22/12/2018 </th>
-                <th> Teléfono sin tono </th>
-                <th> <button @click="$modal.show('fechas-modal')" name="enviar" title="Fechas"> <img src="./img/calendario.png"/> </button> </th>
-                <th> <button @click="visualizar()" class="botonAccion" name="enviar" title="Visualizar"> <img src="./img/documento.png"/> </button> </th>
-                <th> <button @click="$modal.show('resolucion-modal')" class="botonAccion" name="enviar" title="Editar"> <img src="./img/resultado.png"/> </button> </th>
-            </tr>
-
-            <tr>
-                <th> 4 </th>
-                <th > Internet</th>
-                <th> 24/12/2018 </th>
-                <th> Lentitud en bajadas</th>
-                <th> <button @click="$modal.show('fechas-modal')" title="Fechas"> <img src="./img/calendario.png"/> </button> </th>
-                <th> <button @click="visualizar()" name="enviar" class=" otonAccion" title="Visualizar"> <img src="./img/documento.png"/> </button> </th>
-                <th> <button @click="$modal.show('resolucion-modal')" name="enviar" class="botonAccion" title="Editar"> <img src="./img/resultado.png"/> </button> </th>
             </tr>
         </tbody>
 
     </table> 
-
-
-
-    
-    
- 
 </div>
 </template>
 
@@ -94,6 +55,10 @@
     data(){
         return{
         title:'Reclamos',
+        claims: [{reason: 'Cobro indebido', date: '22/10/2018', category: 'Telefonía Móvil'},
+                {reason: 'Televisión por cable sin señal', date: '23/11/2018', category: 'Hogar'},
+                {reason: 'Teléfono sin tono', date: '22/12/2018', category: 'Telefonía'},
+                {reason: 'Lentitud en bajadas', date: '24/12/2018', category: 'Internet'}]
         }
     },
     methods:{
