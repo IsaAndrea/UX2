@@ -21,8 +21,9 @@
     <div class="search">
         <input class="search__input" type="text" placeholder="Número de Reclamo">
     </div>
-
-
+    <div>
+        <CommitChart :chart-data="datacollectionPie"></CommitChart>
+    </div> 
    
     <table class="listaDocumentos" >
         <thead>
@@ -40,9 +41,9 @@
                 <th> {{ claim.reason }} </th>
                 <th> {{ claim.date }} </th>
                 <th> {{ claim.category }} </th>
-                <th> <button @click="$modal.show('fechas-modal')" class="botonAccion" name="enviar" title="Fechas"> <img src="./img/calendario.png"/> </button> </th>
-                <th> <button @click="$modal.show('verReclamo-modal')" class="botonAccion" name="enviar" title="Fechas"> <img src="./img/documento.png"/> </button> </th>
-                <th> <button @click="$modal.show('resolucion-modal')" class="botonAccion" name="enviar" title="Editar"> <img src="./img/resultado.png"/> </button> </th>
+                <th> <button @click="$modal.show('fechas-modal')" class="botonAccion" name="enviar" title="Flujo de Trámite"> <img src="./img/calendario.png"/> </button> </th>
+                <th> <button @click="$modal.show('verReclamo-modal')" class="botonAccion" name="enviar" title="Visualizar Reclamo"> <img src="./img/documento.png"/> </button> </th>
+                <th> <button @click="$modal.show('resolucion-modal')" class="botonAccion" name="enviar" title="Resolución"> <img src="./img/resultado.png"/> </button> </th>
             </tr>
         </tbody>
 
@@ -53,23 +54,55 @@
 
 <script>
     import DemoSizeModal from './ventanaModel.vue'
+    import CommitChart from './CommitChart'
     export default{
         components:{
-			DemoSizeModal,
+            DemoSizeModal,
+            CommitChart
         },
         
     data(){
         return{
         title:'Reclamos',
         claims: [{reason: 'Cobro indebido', date: '22/10/2018', category: 'Telefonía Móvil'},
-                {reason: 'Televisión por cable sin señal', date: '23/11/2018', category: 'Hogar'},
+                {reason: 'Televisión por cable sin señal', date: '23/11/2018', category: 'Television'},
                 {reason: 'Teléfono sin tono', date: '22/12/2018', category: 'Telefonía'},
-                {reason: 'Lentitud en bajadas', date: '24/12/2018', category: 'Internet'}]
-        }
+                {reason: 'Lentitud en bajadas', date: '24/12/2018', category: 'Internet'}],
+        telephone: 1,
+        internet: 4,
+        tv: 9,
+        movil: 2,
+        datacollection: {
+            labels: ['Telefonía', 'Internet', 'Television', 'Móvil'],
+            datasets:[
+                {
+                    label: 'label 1',
+                    backgroundColor: '#f87979',
+                    data: [3, 6]
+                }
+                ]
+            },
+        datacollectionPie: null,
+        }   
     },
-
-    mounted:function(){
-        console.log('listado.vue')
-    }
+    mounted:
+        function(){
+        console.log('listado.vue'),
+        this.fillPieChart()
+        },
+    methods:{
+        fillPieChart(){
+            this.datacollectionPie = {
+                        labels: ['Aprobación 33%', 'Desaprobación 67%'],
+                        datasets: [
+                          {
+                            label: 'Data One',
+                            backgroundColor: ['#66BB6A','#C62828'],
+                            data: [33, 67]
+                          }
+                        ]
+                      }
+            }
+        }
     }
 </script>

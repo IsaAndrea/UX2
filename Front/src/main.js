@@ -8,7 +8,9 @@ import Sugerir from './sugerir.vue';
 import Ingresar from './ingresarSolicitud.vue';
 import ListaE from './listaEmpleado.vue';
 import VueResource from 'vue-resource';
-import VModal from 'vue-js-modal'
+import VModal from 'vue-js-modal';
+import VueCharts from 'vue-chartjs'
+
 require("./style.scss");
 
 
@@ -17,6 +19,8 @@ import App from './Menu.vue';
 Vue.use(VueRouter);
 Vue.use(VueResource);
 Vue.use(VModal, { dialog: true, dynamic : true , injectModalsContainer : true });
+Vue.use(VueCharts);
+
 
 const routes = [
   { path: '/index', alias: '/', component: Index},
