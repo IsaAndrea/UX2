@@ -1,6 +1,8 @@
 <template>
-<div class="center">
+<div class="">
     <demo-size-modal/>
+
+    <div class="divTitulo">
 
    <h1>{{title}}</h1>
 
@@ -12,6 +14,9 @@
         <img src="./img/resultado.png"/>  <div> <label> Visualizar </label> <br/> <label> Resolución </label> </div>
         
    </div>
+   </div>
+
+<div class="center">
 
     <div class="search">
         <input class="search__input" type="text" placeholder="Número de Reclamo">
@@ -42,6 +47,7 @@
         </tbody>
 
     </table> 
+</div>
 </div>
 </template>
 
