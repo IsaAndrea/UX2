@@ -426,3 +426,25 @@ header{
     color: red;
   }
 }
+
+footer {
+  color: #B2BABB;
+  margin-top: 100px;
+  padding-top: 1rem;
+  padding-left: 5rem;
+  padding-bottom: 3rem;
+  background-color: black;
+  .columnaFooter{
+    display: inline-block;
+    width: 30%;
+  }
+  .columnaFooterEn{
+    display: inline-block;
+    position: relative;
+    bottom: 69px;
+  }
+  p{
+    color: white;
+  }
+}
+
