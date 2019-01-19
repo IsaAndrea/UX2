@@ -283,27 +283,20 @@ header{
 }
 
 
-//////////   MODAL FLUJO RECLAMO   //////////
-
-.fechas-modal-content{
-  text-align: left;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-//////////   MODAL CAMBIAR FLUJO   //////////
-
-.cambiarFlujo-modal-content{
-  text-align: left;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-
-
 ////////// MODAL REGISTRO RECLAMO   //////////
 
 .registrar-modal-content{
+  text-align: left;
+  padding-left: 30px;
+  padding-right: 30px;
+  button{
+    margin-left: 20px;
+  }
+}
+
+////////// MODAL RESOLUCIONAR   //////////
+
+.darResolucion-modal-content{
   text-align: left;
   padding-left: 30px;
   padding-right: 30px;
@@ -355,12 +348,6 @@ header{
   text-align: center;
   padding-left: 30px;
   padding-right: 30px;
-  .aprovado{
-    color: green;
-  }
-  .rechazado{
-    color: red;
-  }
 }
 
 footer {
@@ -486,6 +473,5 @@ footer {
   top:315px;
   right: 300px;
   max-width: 30px;
-
 }
 

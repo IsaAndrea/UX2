@@ -96,9 +96,11 @@
 
   </modal>
 
-  <!-- MODAL FLUJO RECLAMO -->
 
-  <modal name="fechas-modal"
+
+  <!-- MODAL SUGERIR -->
+
+  <modal name="darResolucion-modal"
           transition="nice-modal-fade"
           classes="demo-modal-class"
           :min-width="200"
@@ -114,46 +116,18 @@
           @closed="closed"
           @before-close="beforeClose">
 
-    <div class="fechas-modal-content">
-      <h3> Flujo de Reclamo </h3>
-      <div> <label> Fecha de Ingreso: 22/10/2018</label> </div>
-      <div> <label> Servicio al cliente: En revisión</label> </div>
-      <div> <label> Comisión: Pendiente</label> </div>
+    <div class="darResolucion-modal-content">
+      <h3> Entregar Resolución </h3>
+      <textarea name="" id="" cols="100" rows="15"></textarea>
+
+      <button class="registrarR" > Aceptar </button>
     </div>
 
   </modal>
 
 
-    <!-- MODAL CAMBIAR ESTADO -->
 
-  <modal name="cambiarFlujo-modal"
-          transition="nice-modal-fade"
-          classes="demo-modal-class"
-          :min-width="200"
-          :min-height="200"
-          :pivot-y="0.5"
-          :adaptive="true"
-          :scrollable="true"
-          :reset="true"
-          width="60%"
-          height="auto"
-          @before-open="beforeOpen"
-          @opened="opened"
-          @closed="closed"
-          @before-close="beforeClose">
-
-    <div class="cambiarFlujo-modal-content">
-      <h3> Flujo de Reclamo </h3>
-      <div> <label> Fecha de Ingreso: 22/10/2018</label> </div>
-      <div> <label> Servicio al cliente: En revisión</label> </div>
-      <div> <label> Comisión: Pendiente</label> </div>
-    </div>
-
-    <button class="registrarR" > Continuar Flujo </button>
-
-  </modal>
-
-   <!-- MODAL Resolución -->
+   <!-- MODAL VER RESOLUCIÓN -->
 
   <modal name="resolucion-modal"
           transition="nice-modal-fade"

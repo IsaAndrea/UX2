@@ -6,7 +6,7 @@
 
         <h1>{{title}}</h1>
 
-        <button class="registrarDocumento" @click="$modal.show('registrar-modal')"> Ingresar Reclamo </button>
+       
 
         <div class="search">
             <input class="search__input" type="text" placeholder="Número de Reclamo">
@@ -27,7 +27,7 @@
                 <label class="categoriaReclamo"> Reclamo {{ claim.category }} </label>
                 <label class="tituloReclamo"> {{ claim.reason }} </label> 
                 <button @click="$modal.show('verReclamo-modal')" class="botonAccion" name="enviar" title="Leer"> Leer Reclamo </button> 
-                <button @click="$modal.show('resolucion-modal')" class="botonAccion" name="enviar" title="Veredicto"> Dar Resolución </button> 
+                <button @click="$modal.show('darResolucion-modal')" class="botonAccion" name="enviar" title="Veredicto"> Dar Resolución </button> 
             </div>
 
         </div>
