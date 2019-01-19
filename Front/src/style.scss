@@ -72,7 +72,6 @@ header{
   line-height:1.15;
   -ms-text-size-adjust:100%;
   -webkit-text-size-adjust:100%;
-//  background-color: #EAEDED;
   background-color: lighten(#323232, 6%);
   padding: 15px;
   border-radius: 30px 30px 30px 30px;
@@ -120,55 +119,6 @@ header{
 }
 
 
-//////////   LISTA DOCUMENTOS   //////////
-
-.listaDocumentos{
-  border:none; 
-  background-color: lighten(#323232, 6%);
-  padding: 15px;
-  border-radius: 30px 30px 30px 30px;
-  margin-bottom: 30px;
- 
-  thead{
-    th{
-      text-align: left; 
-      border:none; 
-      padding-bottom: 20px; 
-      padding-left: 5px;
-      color: #FF4063;
-    }
-  }
-  tbody{
-    th{
-      font-weight: normal;
-      text-align: left;  
-      padding-left: 5px; 
-      border-bottom: 1px solid #CACFD2; 
-      color:white;
-    }
-  }
-  button{
-    background: lighten(#323232, 20%);
-    width: 40px; 
-    height: 40px;
-    border-style: solid;
-    border-color: lighten(#323232, 20%);
-    padding: 2px;
-    border-radius: 10px;
-    margin-bottom: 2.5px;
-  }
-  img{
-    max-width: 30px;
-    text-align: center;
-  }
-  .nro{width: 5%}
-  .tipo{width: 40%}
-  .semAñ{width: 20%}
-  .motivo{width: 40%}
-}
-
-
-
 
 //////////   BUSCADOR DOCUMENTO   //////////
 
@@ -211,13 +161,13 @@ header{
 
 .sesion{
   width: 100%;
-  background-image: linear-gradient(to top, #F53880 0%, #8E44AD 100%);
+  background-image: linear-gradient(to top, #8E44AD 0%, #3A074F 100%);
   text-align: center;
   margin-top: 8%;
   background-attachment: fixed;
   background-size:cover;
-  padding-top: 50px;
-  padding-bottom: 40px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 
   .login {
     width: 400px;
@@ -245,7 +195,7 @@ header{
       height: 50px;
       padding: 0 20px;
       font-size: 16px;;
-      background-image: linear-gradient(to left, #37495F 0%, rgba(145, 149, 251, 0.86) 100%);
+      background-image: linear-gradient(to left, #F53880 0%, #B4084A 100%);
       color: white;
       text-align: center;
       transition: all 0.2s linear;
@@ -253,7 +203,7 @@ header{
       border-radius: 15px;
       font-weight:bold;
       border-style:solid;
-      border-color: lighten(#37495F, 40%);
+      border-color: lighten(#F53880, 40%);
     }
   }
 
@@ -263,30 +213,10 @@ header{
     color: white;
     text-align: center;
     padding:40px;
-    margin-top:100px; 
     .imgU{height:101px}
   }
 }
 
-
-////////// LEYENDAS ICONOS //////////
-
-.iconos{
-  margin-bottom: 20px;
-  div{
-    display: inline-block;
-    margin-left: 6px;
-  }
-  img{
-    width: 40px;
-    margin-left: 40px;
-  }
-  label{
-    position: relative;
-    top: -23px;
-    float: left;
-  }
-}
 
 
 
@@ -456,8 +386,8 @@ footer {
 
 .divTitulo{
   //background-color: #822E81;
-  background: -moz-linear-gradient(right, #AF57E1 ,#822E81); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, #AF57E1 ,#822E81); /* Standard syntax */
+  background: -moz-linear-gradient(right, #A70DD4 ,#3A074F); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #A70DD4 ,#3A074F); /* Standard syntax */
   mix-blend-mode: lighten;
   width: 100%;
   text-align: center;
@@ -538,5 +468,24 @@ footer {
   color:white;
   background-color:#F53880;
   border-color: #F53880 ;
+}
+
+.tituloVTR{
+  font-size: 200px;
+}
+
+.subTituloVTR{
+  position: absolute;
+  top: 460px;
+  left: 230px;
+  font-size: 90px;
+}
+
+.logoVTR{
+  position: absolute;
+  top:315px;
+  right: 300px;
+  max-width: 30px;
+
 }
 

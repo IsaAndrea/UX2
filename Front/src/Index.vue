@@ -3,12 +3,15 @@
 
   <div class="sesion">
 
+    <label class="tituloVTR"> VTR </label>
+    <label class="subTituloVTR"> Reclamos </label>
+    <img class="logoVTR" src="./img/logo2.png"/>
+
     <form class="login">
       <input class="form-input" id="txt-input" type="text" placeholder="Nombre de Usuario" required>
       <input class="form-input" type="password" placeholder="Contraseña" id="pwd"  name="password" required>
       <button class="log-in"> Iniciar Sesión </button>
     </form>
-
 
   </div>
 </div>
