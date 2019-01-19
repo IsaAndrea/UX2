@@ -6,39 +6,22 @@
 
         <h1>{{title}}</h1>
 
-        <select v-model="selected">
-            <option>Todos</option>
-            <option disabled value="">Categoría</option>
-            <option>Internet Hogar</option>
-            <option>Telefonía Hogar</option>
-            <option>Televisión Hogar</option>
-            <option>Internet Móvil</option>
-            <option>Telefonía Móvil</option>
-            <option disabled value="">Estado</option>
-            <option>Resuelto</option>
-            <option>Pendiente</option>
-        </select>
-
-        <button v-on:click="filter">Filtrar</button>
-
         <div class="filtros">
-            <input class="filtroT" type="radio" value="todos" checked="checked" /> Todos
-            <div class="filtroEstado">
-                <label>Filtrar por Estado</label>
-                <div class="filtro"> <input type="radio" /> Pendientes </div>
-                <div class="filtro"> <input type="radio" /> Resueltos </div>
-           
-            </div>
-            <div class="filtroCategoria">
-                <label>Filtrar por Categoría</label>
-                <div class="filtro"> <input type="radio" />Internet Hogar</div>
-                <div class="filtro"> <input type="radio" />Internet Móvil</div>
-                <div class="filtro"><input type="radio" />Telefonía Hogar</div>
-                <div class="filtro"> <input type="radio" />Telefonía Móvil</div>
-                <div class="filtro"> <input type="radio" />Televisión</div>
-            </div>
-        </div>
+            <select v-model="selected">
+                <option>Todos</option>
+                <option disabled value="">Categoría</option>
+                <option>Internet Hogar</option>
+                <option>Telefonía Hogar</option>
+                <option>Televisión Hogar</option>
+                <option>Internet Móvil</option>
+                <option>Telefonía Móvil</option>
+                <option disabled value="">Estado</option>
+                <option>Resuelto</option>
+                <option>Pendiente</option>
+            </select>
 
+            <button v-on:click="filter">Filtrar</button>
+        </div>
         <div class="search">
             <input class="search__input" type="text" placeholder="Número de Reclamo">
         </div>
