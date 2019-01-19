@@ -2,10 +2,6 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Index from './Index.vue';
 import listado from './listadoDocumento.vue';
-import Ingreso from './rellenarDocumento.vue';
-import Gestion from './gestionDocumento.vue';
-import Sugerir from './sugerir.vue';
-import Ingresar from './ingresarSolicitud.vue';
 import ListaE from './listaEmpleado.vue';
 import VueResource from 'vue-resource';
 import VModal from 'vue-js-modal';
@@ -25,9 +21,6 @@ Vue.use(VueCharts);
 const routes = [
   { path: '/index', alias: '/', component: Index},
   { path: '/documentos', alias: '/listado', component: listado},
-  { path: '/ingreso', alias: '/documento', component: Ingreso},
-  { path: '/gestion', alias: '/gestionD', component: Gestion},
-  { path: '/ingresar', alias: '/registro', component: Ingresar},
   { path: '/reclamosF', alias: '/reclamos', component: ListaE}
 ]
 
