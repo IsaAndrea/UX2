@@ -30,7 +30,7 @@
           <div class="textoDetalle">
             <label class="numReclamo"> {{ index+1 }}</label>
             <label class="fechaReclamo"> {{ claim.date }} </label>
-            <label class="estadoReclamo"> Estado: Pendiente </label>
+            <label class="estadoReclamo"> Estado: {{ claim.state }} </label>
         </div> 
 	  </div> 
 
@@ -40,7 +40,7 @@
             <label class="tituloReclamo"> {{ claim.reason }} </label> 
             </div>
             <button @click="$modal.show('verReclamo-modal')" class="botonAccion" name="enviar" title="Leer"> Leer Reclamo </button> 
-             <button @click="$modal.show('resolucion-modal')" class="botonAccion" name="enviar" title="Leer"> Leer Resolución </button> 
+             <button @click="$modal.show('resolucion-modal')" v-if="claim.state != 'Pendiente'" class="botonAccion" name="enviar" title="Leer"> Leer Resolución </button> 
         </div>
 
 	</div>
@@ -62,10 +62,10 @@
     data(){
         return{
         title:'Reclamos',
-        claims: [{reason: 'Cobro indebido', date: '22/10/2018', category: 'Telefonía Móvil'},
-                {reason: 'Televisión por cable sin señal', date: '23/11/2018', category: 'Television'},
-                {reason: 'Teléfono sin tono', date: '22/12/2018', category: 'Telefonía'},
-                {reason: 'Lentitud en bajadas', date: '24/12/2018', category: 'Internet'}],
+        claims: [{reason: 'Cobro indebido', date: '22/10/2018', category: 'Telefonía Móvil', state:'Resuelto'},
+                {reason: 'Televisión por cable sin señal', date: '23/11/2018', category: 'Television', state: 'Pendiente'},
+                {reason: 'Teléfono sin tono', date: '22/12/2018', category: 'Telefonía', state: 'Pendiente'},
+                {reason: 'Lentitud en bajadas', date: '24/12/2018', category: 'Internet', state: 'Pendiente'}],
         telephone: 1,
         internet: 4,
         tv: 9,
