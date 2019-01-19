@@ -174,22 +174,23 @@ header{
 
 .search {
   margin-bottom: 10px;
+  margin-top: 100px;
   input {
       width: 50%;
       padding: 12px 24px;
       background-color: transparent;
       font-size: 14px;
-      color: #37495F;
+      color: white;
       background-image: url(http://mihaeltomic.com/codepen/input-search/ic_search_black_24px.svg);
       background-repeat: no-repeat;
       background-size: 25px 25px;
       background-position: 95% center;
       border-radius: 50px;
-      border: 1px solid #37495F;
+      border: 1px solid white;
       transition: all 250ms ease-in-out;
       margin-bottom: 20px;
       &::placeholder {
-          color: #37495F;
+          color: white;
       }
       
       &:hover,
@@ -197,7 +198,7 @@ header{
           padding: 12px 0;
           outline: 0;
           border: 1px solid transparent;
-          border-bottom: 1px solid #37495F;
+          border-bottom: 1px solid white;
           border-radius: 0;
           background-position: 100% center;
       }
@@ -210,11 +211,14 @@ header{
 
 .sesion{
   width: 100%;
-  background: url("./img/usach222.png");
+  background-image: linear-gradient(to top, #F53880 0%, #8E44AD 100%);
   text-align: center;
-  margin-top: 14%;
+  margin-top: 8%;
   background-attachment: fixed;
   background-size:cover;
+  padding-top: 50px;
+  padding-bottom: 40px;
+
   .login {
     width: 400px;
     height: auto;
@@ -431,7 +435,7 @@ header{
 
 footer {
   color: #B2BABB;
-  margin-top: 100px;
+  margin-top: 200px;
   padding-top: 1rem;
   padding-left: 5rem;
   padding-bottom: 3rem;
@@ -469,3 +473,70 @@ footer {
   }
   
 }
+
+.detalleReclamo{
+  grid-area:areaA;
+  border-style: solid;
+  border-width: 4px;
+  border-color: #822E81;
+  border-radius: 30px 0px 0px 30px;
+  color: white;
+  background-color: #822E81;
+  
+  label{
+    display: block;
+  }
+}
+
+.infoReclamo{
+  grid-area:areaB;
+  border-radius: 0px 30px 30px 0px;
+  border-style: solid;
+  border-width: 4px;
+  border-color: #822E81;
+  color: #323232;
+  
+  label{
+    display: block;
+  }
+  button{
+    position: relative;
+    right: -200px;
+    width: 100px;
+    height: 50px;
+    padding:.25rem .5rem;
+    font-size:.875rem;
+    border-radius: 40px;
+    border-style: solid;
+    font-size:100%;
+    color:white;
+    background-color:#F53880;
+    border-color: #F53880 ;
+  }
+}
+
+.grid{
+	display:grid;
+  grid-template-areas: "areaA areaB";
+  grid-template-columns: 30% 50%;
+  grid-template-rows: 150px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.verGrafico{
+  position: absolute;
+  top: 180px;
+  right: 380px;
+  width: 200px;
+  height: 50px;
+  padding:.25rem .5rem;
+  font-size:.875rem;
+  border-radius: 40px;
+  border-style: solid;
+  font-size:100%;
+  color:white;
+  background-color:#F53880;
+  border-color: #F53880 ;
+}
+

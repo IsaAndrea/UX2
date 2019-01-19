@@ -4,50 +4,44 @@
 
     <div class="divTitulo">
 
-   <h1>{{title}}</h1>
+        <h1>{{title}}</h1>
 
-   <button class="registrarDocumento" @click="$modal.show('registrar-modal')"> Ingresar Reclamo </button>
+        <button class="registrarDocumento" @click="$modal.show('registrar-modal')"> Ingresar Reclamo </button>
+        <button class="verGrafico" @click="$modal.show('grafico-modal')"> Estado de revisiones </button>
 
-   <div class="iconos">
-        <img src="./img/calendario.png"/> <div>  <label> Visualizar </label> <br/> <label> Flujo de trámite </label>  </div>
-        <img src="./img/documento.png"/> <div>  <label> Visualizar </label> <br/> <label> Reclamo </label> </div>
-        <img src="./img/resultado.png"/>  <div> <label> Visualizar </label> <br/> <label> Resolución </label> </div>
-        
-   </div>
+        <div class="search">
+            <input class="search__input" type="text" placeholder="Número de Reclamo">
+        </div>
+
    </div>
 
 <div class="center">
 
-    <div class="search">
-        <input class="search__input" type="text" placeholder="Número de Reclamo">
-    </div>
-    <div>
+
+<!--
+     <div>
         <CommitChart :chart-data="datacollectionPie"></CommitChart>
-    </div> 
-   
-    <table class="listaDocumentos" >
-        <thead>
-            <tr>
-                <th class="nro"> Nro. </th>
-                <th class="tipo"> Motivo </th>
-                <th class="semAñ"> Fecha </th>
-                <th class="motivo"> Categoria </th>  
-            </tr>
-        </thead> 
+    </div> -->
 
-        <tbody v-for="(claim, index) in claims">
-            <tr>
-                <th> {{ index+1 }} </th>
-                <th> {{ claim.reason }} </th>
-                <th> {{ claim.date }} </th>
-                <th> {{ claim.category }} </th>
-                <th> <button @click="$modal.show('fechas-modal')" class="botonAccion" name="enviar" title="Flujo de Trámite"> <img src="./img/calendario.png"/> </button> </th>
-                <th> <button @click="$modal.show('verReclamo-modal')" class="botonAccion" name="enviar" title="Visualizar Reclamo"> <img src="./img/documento.png"/> </button> </th>
-                <th> <button @click="$modal.show('resolucion-modal')" class="botonAccion" name="enviar" title="Resolución"> <img src="./img/resultado.png"/> </button> </th>
-            </tr>
-        </tbody>
 
-    </table> 
+
+    <div class="grid" v-for="(claim, index) in claims"> 
+	  <div class="detalleReclamo">
+        <label class="numReclamo"> {{ index+1 }}</label>
+        <label class="fechaReclamo"> {{ claim.date }} </label>
+        <label class="estadoReclamo"> Estado: Pendiente </label>
+	  </div> 
+
+	   <div class="infoReclamo">
+            <label class="categoriaReclamo"> Reclamo {{ claim.category }} </label>
+            <label class="tituloReclamo"> {{ claim.reason }} </label> 
+            <button @click="$modal.show('verReclamo-modal')" class="botonAccion" name="enviar" title="Leer"> Leer Reclamo </button> 
+             <button @click="$modal.show('resolucion-modal')" class="botonAccion" name="enviar" title="Leer"> Leer Resolución </button> 
+        </div>
+
+	</div>
+
+
 </div>
 </div>
 </template>
@@ -93,7 +87,7 @@
     methods:{
         fillPieChart(){
             this.datacollectionPie = {
-                        labels: ['Aprobación 33%', 'Desaprobación 67%'],
+                        labels: ['Revisados 33%', 'Pendientes 67%'],
                         datasets: [
                           {
                             label: 'Data One',

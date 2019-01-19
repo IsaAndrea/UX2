@@ -1,47 +1,38 @@
 <template>
-<div class="center">
+<div>
     <demo-size-modal/>
 
-   <h1>{{title}}</h1>
+    <div class="divTitulo">
 
-   <button class="registrarDocumento" @click="$modal.show('registrar-modal')"> Ingresar Reclamo </button>
+        <h1>{{title}}</h1>
 
-   <div class="iconos">
-        <img src="./img/calendario.png"/> <div>  <label> Visualizar </label> <br/> <label> Flujo de trámite </label>  </div>
-        <img src="./img/documento.png"/> <div>  <label> Visualizar </label> <br/> <label> Reclamo </label> </div>
-        <img src="./img/resultado.png"/>  <div> <label> Visualizar </label> <br/> <label> Resolución </label> </div>
-        
+        <button class="registrarDocumento" @click="$modal.show('registrar-modal')"> Ingresar Reclamo </button>
+
+        <div class="search">
+            <input class="search__input" type="text" placeholder="Número de Reclamo">
+        </div>
+
    </div>
 
-    <div class="search">
-        <input class="search__input" type="text" placeholder="Número de Reclamo">
+    <div class="center">
+
+        <div class="grid" v-for="(claim, index) in claims"> 
+        <div class="detalleReclamo">
+            <label class="numReclamo"> {{ index+1 }}</label>
+            <label class="fechaReclamo"> {{ claim.date }} </label>
+            <label class="estadoReclamo"> Estado: Pendiente </label>
+        </div> 
+
+        <div class="infoReclamo">
+                <label class="categoriaReclamo"> Reclamo {{ claim.category }} </label>
+                <label class="tituloReclamo"> {{ claim.reason }} </label> 
+                <button @click="$modal.show('verReclamo-modal')" class="botonAccion" name="enviar" title="Leer"> Leer Reclamo </button> 
+                <button @click="$modal.show('resolucion-modal')" class="botonAccion" name="enviar" title="Veredicto"> Dar Resolución </button> 
+            </div>
+
+        </div>
+    
     </div>
-
-
-   
-    <table class="listaDocumentos" >
-        <thead>
-            <tr>
-                <th class="nro"> Nro. </th>
-                <th class="tipo"> Motivo </th>
-                <th class="semAñ"> Fecha </th>
-                <th class="motivo"> Categoria </th>  
-            </tr>
-        </thead> 
-
-        <tbody v-for="(claim, index) in claims">
-            <tr>
-                <th> {{ index+1 }} </th>
-                <th> {{ claim.reason }} </th>
-                <th> {{ claim.date }} </th>
-                <th> {{ claim.category }} </th>
-                <th> <button @click="$modal.show('fechas-modal')" class="botonAccion" name="enviar" title="Fechas"> <img src="./img/calendario.png"/> </button> </th>
-                <th> <button @click="visualizar()" class="botonAccion" name="enviar" title="Visualizar"> <img src="./img/documento.png"/> </button> </th>
-                <th> <button @click="$modal.show('resolucion-modal')" class="botonAccion" name="enviar" title="Editar"> <img src="./img/resultado.png"/> </button> </th>
-            </tr>
-        </tbody>
-
-    </table> 
 </div>
 </template>
 
