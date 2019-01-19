@@ -27,14 +27,18 @@
 
     <div class="grid" v-for="(claim, index) in claims"> 
 	  <div class="detalleReclamo">
-        <label class="numReclamo"> {{ index+1 }}</label>
-        <label class="fechaReclamo"> {{ claim.date }} </label>
-        <label class="estadoReclamo"> Estado: Pendiente </label>
+          <div class="textoDetalle">
+            <label class="numReclamo"> {{ index+1 }}</label>
+            <label class="fechaReclamo"> {{ claim.date }} </label>
+            <label class="estadoReclamo"> Estado: Pendiente </label>
+        </div> 
 	  </div> 
 
 	   <div class="infoReclamo">
+           <div class="textoInfo">
             <label class="categoriaReclamo"> Reclamo {{ claim.category }} </label>
             <label class="tituloReclamo"> {{ claim.reason }} </label> 
+            </div>
             <button @click="$modal.show('verReclamo-modal')" class="botonAccion" name="enviar" title="Leer"> Leer Reclamo </button> 
              <button @click="$modal.show('resolucion-modal')" class="botonAccion" name="enviar" title="Leer"> Leer Resolución </button> 
         </div>
