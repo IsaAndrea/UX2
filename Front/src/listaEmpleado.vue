@@ -47,7 +47,7 @@
 
     <div class="center">
 
-        <div class="grid" v-for="(claim, index) in claims"> 
+        <div class="grid" v-for="(claim, index) in claimSelected"> 
             <div class="detalleReclamo">
                  <div class="textoDetalle">
                     <label class="numReclamo"> {{ index+1 }}</label>
