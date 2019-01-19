@@ -7,13 +7,14 @@
         <h1>{{title}}</h1>
 
         <select v-model="selected">
-            <option disabled value="">Seleccione una opción</option>
             <option>Todos</option>
+            <option disabled value="">Categoría</option>
             <option>Internet Hogar</option>
             <option>Telefonía Hogar</option>
             <option>Televisión Hogar</option>
             <option>Internet Móvil</option>
             <option>Telefonía Móvil</option>
+            <option disabled value="">Estado</option>
             <option>Resuelto</option>
             <option>Pendiente</option>
         </select>

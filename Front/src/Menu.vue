@@ -8,8 +8,7 @@
       </div>
 
       <nav>
-        <a href="#/listado">Reclamos</a>
-        <a href="#/reclamos">ReclamosF</a>
+        <a href="#/">Cerrar Sesión</a>
       </nav>
     </header>
 
