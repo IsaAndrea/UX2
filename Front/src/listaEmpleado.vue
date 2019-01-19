@@ -9,17 +9,16 @@
         <div class="filtros">
             <select v-model="selected">
                 <option>Todos</option>
-                <option disabled value="">Categoría</option>
+                <option disabled value="" class="tipoFiltro">Categoría</option>
                 <option>Internet Hogar</option>
                 <option>Telefonía Hogar</option>
                 <option>Televisión Hogar</option>
                 <option>Internet Móvil</option>
                 <option>Telefonía Móvil</option>
-                <option disabled value="">Estado</option>
+                <option disabled value="" class="tipoFiltro">Estado</option>
                 <option>Resuelto</option>
                 <option>Pendiente</option>
             </select>
-
             <button v-on:click="filter">Filtrar</button>
         </div>
 
