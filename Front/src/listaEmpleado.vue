@@ -22,9 +22,12 @@
 
             <button v-on:click="filter">Filtrar</button>
         </div>
+
         <div class="search">
             <input class="search__input" type="text" placeholder="Número de Reclamo">
         </div>
+
+        
 
    </div>
 
