@@ -273,15 +273,6 @@ header{
 }
 
 
-//////////   MODAL SUGERENCIAS   //////////
-
-.sugerencias-modal-content{
-  padding-top: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
-  text-align: justify;
-}
-
 
 ////////// MODAL REGISTRO RECLAMO   //////////
 
@@ -475,3 +466,25 @@ footer {
   max-width: 30px;
 }
 
+.filtros{
+  position: relative;
+  left: 400px; 
+  text-align: left;
+  .filtro{
+    display: block;
+  }
+  .filtroT{
+    display: inline-block;
+  }
+  .filtroEstado{
+    margin-left: 50px;
+    margin-right: 50px;
+    display: inline-block;
+  }
+  .filtroCategoria{
+    display: inline-block;
+  }
+  label{
+    font-weight: bold;
+  }
+}

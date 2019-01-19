@@ -6,7 +6,23 @@
 
         <h1>{{title}}</h1>
 
-       
+        <div class="filtros">
+            <input class="filtroT" type="radio" value="todos" checked="checked" /> Todos
+            <div class="filtroEstado">
+                <label>Filtrar por Estado</label>
+                <div class="filtro"> <input type="radio" /> Pendientes </div>
+                <div class="filtro"> <input type="radio" /> Resueltos </div>
+           
+            </div>
+            <div class="filtroCategoria">
+                <label>Filtrar por Categoría</label>
+                <div class="filtro"> <input type="radio" /> Internet Hogar </div>
+                <div class="filtro"> <input type="radio" /> Internet Móvil </div>
+                <div class="filtro"><input type="radio" /> Telefonía Hogar </div>
+                <div class="filtro"> <input type="radio" /> Telefonía Móvil </div>
+                <div class="filtro"> <input type="radio" /> Televisión </div>
+            </div>
+        </div>
 
         <div class="search">
             <input class="search__input" type="text" placeholder="Número de Reclamo">
