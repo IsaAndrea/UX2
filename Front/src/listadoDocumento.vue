@@ -17,11 +17,9 @@
 
 <div class="center">
 
-
-<!--
-     <div>
+     <div class="small">
         <CommitChart :chart-data="datacollectionPie"></CommitChart>
-    </div> -->
+    </div>
 
 
 
@@ -66,40 +64,45 @@
                 {reason: 'Televisión por cable sin señal', date: '23/11/2018', category: 'Television', state: 'Pendiente'},
                 {reason: 'Teléfono sin tono', date: '22/12/2018', category: 'Telefonía', state: 'Pendiente'},
                 {reason: 'Lentitud en bajadas', date: '24/12/2018', category: 'Internet', state: 'Pendiente'}],
-        telephone: 1,
-        internet: 4,
-        tv: 9,
-        movil: 2,
-        datacollection: {
-            labels: ['Telefonía', 'Internet', 'Television', 'Móvil'],
-            datasets:[
-                {
-                    label: 'label 1',
-                    backgroundColor: '#f87979',
-                    data: [3, 6]
-                }
-                ]
-            },
         datacollectionPie: null,
+        pendiente: 0,
+        resuelto: 0
         }   
     },
     mounted:
         function(){
         console.log('listado.vue'),
+        this.update()
         this.fillPieChart()
         },
     methods:{
         fillPieChart(){
             this.datacollectionPie = {
-                        labels: ['Revisados 33%', 'Pendientes 67%'],
+                        labels: ['Resueltos', 'Pendientes'],
                         datasets: [
                           {
                             label: 'Data One',
-                            backgroundColor: ['#66BB6A','#C62828'],
-                            data: [33, 67]
+                            backgroundColor: ['#822E81','#B4084A'],
+                            data: [this.resuelto, this.pendiente]
                           }
                         ]
                       }
+            },
+        update(){
+            var resuelto = 0
+            var pendiente = 0
+            this.claims.forEach(element => {
+                
+                if(element.state == 'Pendiente'){
+                    pendiente = pendiente +1
+                }
+                else if(element.state == 'Resuelto'){
+                    resuelto++
+                }
+                
+            });
+            this.resuelto = resuelto
+            this.pendiente = pendiente
             }
         }
     }
