@@ -3,8 +3,10 @@
 
   <div class="sesion">
 
+   
     <label class="tituloVTR"> VTR </label>
     <label class="subTituloVTR"> Reclamos </label>
+    
     <img class="logoVTR" src="./img/logo2.png"/>
 
     <form class="login">

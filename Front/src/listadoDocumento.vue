@@ -7,16 +7,23 @@
         <h1>{{title}}</h1>
 
         <button class="registrarDocumento" @click="$modal.show('registrar-modal')"> Ingresar Reclamo </button>
-        <button class="verGrafico" @click="$modal.show('grafico-modal')"> Estado de revisiones </button>
+       
 
         <div class="search">
             <input class="search__input" type="text" placeholder="Número de Reclamo">
+        </div>
+
+        <div class="mensajeR">
+        Recuerda que para ingresar tu reclamo tienes un plazo de 60 días hábiles desde que tomas conocimiento sobre el hecho reclamado, o también, desde la fecha de vencimiento del documento de cobro. Nosotros poseemos, un plazo máximo de 5 días hábiles para responderte (en caso que no enviemos nuestra respuesta, tu reclamo se tendrá por acogido). Debes considerar, que la respuesta se puede demorar unos días en llegar a tu domicilio. Si no quedas conforme con nuestra respuesta, tienes un plazo de 30 días hábiles para reclamar ante SUBTEL.
         </div>
 
    </div>
 
 <div class="center">
 
+    <img class="reclamosTS" src="./img/reclamos.png"/>
+    <button class="aqui" onclick="location.href='https://vtr.com/sucursales/'"> </button>
+    <label class="tituloEstadoR"> Estado de reclamos ingresados </label> 
      <div class="small">
         <CommitChart :chart-data="datacollectionPie"></CommitChart>
     </div>
@@ -33,12 +40,18 @@
 	  </div> 
 
 	   <div class="infoReclamo">
-           <div class="textoInfo">
-            <label class="categoriaReclamo"> Reclamo {{ claim.category }} </label>
+           <img src="./img/telefonoM.png"/><!--
+           <img src="./img/telefonoH.png"/>
+           <img src="./img/internetM.png"/>
+           <img src="./img/internetH.png"/> 
+           <img src="./img/televisor.png"/>-->
+
+           <label class="categoriaReclamo"> Reclamo {{ claim.category }} </label>
+           <div class="texto">
             <label class="tituloReclamo"> {{ claim.reason }} </label> 
             </div>
-            <button @click="$modal.show('verReclamo-modal')" class="botonAccion" name="enviar" title="Leer"> Leer Reclamo </button> 
-             <button @click="$modal.show('resolucion-modal')" v-if="claim.state != 'Pendiente'" class="botonAccion" name="enviar" title="Leer"> Leer Resolución </button> 
+            <button @click="$modal.show('verReclamo-modal')" class="botonC" name="enviar" title="Leer"> Leer Reclamo </button> 
+            <button @click="$modal.show('resolucion-modal')" v-if="claim.state != 'Pendiente'" class="botonC" name="enviar" title="Leer"> Leer Resolución </button> 
         </div>
 
 	</div>

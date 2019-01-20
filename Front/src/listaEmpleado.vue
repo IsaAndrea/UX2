@@ -42,13 +42,18 @@
             </div> 
 
             <div class="infoReclamo">
-                <div class="textoInfo">
-                    <label class="categoriaReclamo"> Reclamo {{ claim.category }} </label>
+                <img src="./img/telefonoM.png"/><!--
+                <img src="./img/telefonoH.png"/>
+                <img src="./img/internetM.png"/>
+                <img src="./img/internetH.png"/> 
+                <img src="./img/televisor.png"/>-->
+                <label class="categoriaReclamo"> Reclamo {{ claim.category }} </label>
+                <div class="texto">
                     <label class="tituloReclamo"> {{ claim.reason }} </label> 
-                    <label class="categoriaReclamo"> Usuario Pepito Motuda </label>
+                    <label class="usuarioReclamo"> Usuario Pepito Motuda </label>
                  </div>
-                <button @click="$modal.show('verReclamo-modal')" class="botonAccion" name="enviar" title="Leer"> Leer Reclamo </button> 
-                <button @click="$modal.show('darResolucion-modal')" v-if="claim.state != 'Resuelto'" class="botonAccion" name="enviar" title="Veredicto"> Dar Resolución </button> 
+                <button @click="$modal.show('verReclamo-modal')" class="botonE" name="enviar" title="Leer"> Leer Reclamo </button> 
+                <button @click="$modal.show('darResolucion-modal')" v-if="claim.state != 'Resuelto'" class="botonE" name="enviar" title="Veredicto"> Dar Resolución </button> 
                 
             </div>
         </div>

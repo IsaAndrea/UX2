@@ -180,30 +180,6 @@
 
   </modal> 
 
-  <!-- MODAL GRAFICO -->
-
-  <modal name="grafico-modal"
-          transition="nice-modal-fade"
-          classes="demo-modal-class"
-          :min-width="200"
-          :min-height="200"
-          :pivot-y="0.5"
-          :adaptive="true"
-          :scrollable="true"
-          :reset="true"
-          width="60%"
-          height="auto"
-          @before-open="beforeOpen"
-          @opened="opened"
-          @closed="closed"
-          @before-close="beforeClose">
-
-    <div class="grafico-modal-content">
-       <CommitChart :chart-data="datacollectionPie"></CommitChart>
-    </div>
-
-  </modal>
-
 
 </div>
 </template>
