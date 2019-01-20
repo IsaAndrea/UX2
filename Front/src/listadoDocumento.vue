@@ -40,11 +40,11 @@
 	  </div> 
 
 	   <div class="infoReclamo">
-           <img src="./img/telefonoM.png"/><!--
-           <img src="./img/telefonoH.png"/>
-           <img src="./img/internetM.png"/>
-           <img src="./img/internetH.png"/> 
-           <img src="./img/televisor.png"/>-->
+           <img v-if="claim.category == 'Telefonía Móvil'" src="./img/telefonoM.png"/>
+           <img v-if="claim.category == 'Telefonía Hogar'" src="./img/telefonoH.png"/>
+           <img v-if="claim.category == 'Internet Móvil'" src="./img/internetM.png"/>
+           <img v-if="claim.category == 'Internet Hogar'" src="./img/internetH.png"/> 
+           <img v-if="claim.category == 'Televisión'" src="./img/televisor.png"/>
 
            <label class="categoriaReclamo"> Reclamo {{ claim.category }} </label>
            <div class="texto">
@@ -74,9 +74,9 @@
         return{
         title:'Reclamos',
         claims: [{reason: 'Cobro indebido', date: '22/10/2018', category: 'Telefonía Móvil', state:'Resuelto'},
-                {reason: 'Televisión por cable sin señal', date: '23/11/2018', category: 'Television', state: 'Pendiente'},
-                {reason: 'Teléfono sin tono', date: '22/12/2018', category: 'Telefonía', state: 'Pendiente'},
-                {reason: 'Lentitud en bajadas', date: '24/12/2018', category: 'Internet', state: 'Pendiente'}],
+                {reason: 'Televisión por cable sin señal', date: '23/11/2018', category: 'Televisión', state: 'Pendiente'},
+                {reason: 'Teléfono sin tono', date: '22/12/2018', category: 'Telefonía Hogar', state: 'Pendiente'},
+                {reason: 'Lentitud en bajadas', date: '24/12/2018', category: 'Internet Hogar', state: 'Pendiente'}],
         datacollectionPie: null,
         pendiente: 0,
         resuelto: 0
