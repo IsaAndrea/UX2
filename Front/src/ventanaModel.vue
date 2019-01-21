@@ -53,7 +53,7 @@
         </div>       
     </form>
 
-    <button class="registrarR" > Ingresar </button>
+    <button class="registrarR" v-on:click="mensaje"> Ingresar </button>
     </div>
 
   </modal>
@@ -235,7 +235,10 @@
                           }
                         ]
                       }
-            }
+            },
+      mensaje(){
+        alert("Se ingresó el reclamo correctamente.")
+        }
     }
   }
 </script>
