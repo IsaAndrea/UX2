@@ -10,7 +10,7 @@
        
 
         <div class="search">
-            <input class="search__input" type="text" placeholder="Número de Reclamo">
+            <input class="search__input" v-model="n_doc" v-on:keyup="search" type="number" placeholder="Número de Reclamo">
         </div>
 
         <div class="mensajeR">
@@ -30,10 +30,10 @@
 
 
 
-    <div class="grid" v-for="(claim, index) in claims"> 
+    <div class="grid" v-for="(claim, index) in claimSelected"> 
 	  <div class="detalleReclamo">
           <div class="textoDetalle">
-            <label class="numReclamo"> {{ index+1 }}</label>
+            <label class="numReclamo"> {{ claim.index }}</label>
             <label class="fechaReclamo"> {{ claim.date }} </label>
             <label class="estadoReclamo"> Estado: {{ claim.state }} </label>
         </div> 
@@ -73,17 +73,20 @@
     data(){
         return{
         title:'Reclamos',
-        claims: [{reason: 'Cobro indebido', date: '22/10/2018', category: 'Telefonía Móvil', state:'Resuelto'},
-                {reason: 'Televisión por cable sin señal', date: '23/11/2018', category: 'Televisión', state: 'Pendiente'},
-                {reason: 'Teléfono sin tono', date: '22/12/2018', category: 'Telefonía Hogar', state: 'Pendiente'},
-                {reason: 'Lentitud en bajadas', date: '24/12/2018', category: 'Internet Hogar', state: 'Pendiente'}],
+        claims: [{reason: 'Cobro indebido', date: '22/10/2018', category: 'Telefonía Móvil', state:'Resuelto', index: '1'},
+                {reason: 'Televisión por cable sin señal', date: '23/11/2018', category: 'Televisión', state: 'Pendiente', index: '2'},
+                {reason: 'Teléfono sin tono', date: '22/12/2018', category: 'Telefonía Hogar', state: 'Pendiente', index: '3'},
+                {reason: 'Lentitud en bajadas', date: '24/12/2018', category: 'Internet Hogar', state: 'Pendiente', index: '4'}],
         datacollectionPie: null,
         pendiente: 0,
-        resuelto: 0
+        resuelto: 0,
+        n_doc: null,
+        claimSelected: null
         }   
     },
     mounted:
         function(){
+        this.claimSelected = this.claims
         console.log('listado.vue'),
         this.update()
         this.fillPieChart()
@@ -116,6 +119,16 @@
             });
             this.resuelto = resuelto
             this.pendiente = pendiente
+            },
+        search(){
+            this.claimSelected = []
+            var index = 1
+            this.claims.forEach(element => {
+                if(index == this.n_doc){
+                    this.claimSelected.push(element)
+                }
+                index++
+            });
             }
         }
     }
