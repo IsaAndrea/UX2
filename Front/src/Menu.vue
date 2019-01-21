@@ -8,6 +8,12 @@
       </div>
 
       <nav>
+         <a href="#/">Packs</a>
+        <a href="#/">Internet</a>
+        <a href="#/">Televisión</a>
+        <a href="#/">Móvil</a>
+        <a href="#/">Entretención</a>
+        <a href="#/">Centro de ayuda</a>
         <a href="#/">Cerrar Sesión</a>
       </nav>
     </header>

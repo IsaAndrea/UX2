@@ -20,7 +20,7 @@
           @before-close="beforeClose">
 
     <div class="registrar-modal-content">
-      <h3> Ingresar Reclamo </h3>
+      <h2> Ingresar Reclamo </h2>
 
        <form class="formRegistro" > 
         <div class="row">
@@ -78,17 +78,16 @@
           @before-close="beforeClose">
 
     <div class="verReclamo-modal-content">
-      <h3> Título </h3>
 
       <div>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dictum purus egestas libero ornare.
-        Maecenas pharetra tortor eu tortor imperdiet, a faucibus quam finibus. Nulla id lacinia quam.
-        Praesent imperdiet sed magna non finibus. Aenean blandit, mauris vitae lacinia rutrum,
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dictum purus egestas libero
+        Maecenas pharetra tortor eu tortor imperdiet, a faucibus quam finibus. Nulla id lacinia.
+        Praesent imperdiet sed magna non finibus. Aenean blandit, mauris vitae lacinia rutrumsd fdg
         nunc mi scelerisque sem, in laoreet sem lectus ut orci. Ut egestas nulla in vehicula feugiat.
         Vivamus tincidunt nisi vel risus dictum suscipit. Nulla id blandit mi, vulputate aliquam enim.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dictum purus egestas libero ornare.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dictum purus egestas libero.
         Maecenas pharetra tortor eu tortor imperdiet, a faucibus quam finibus. Nulla id lacinia quam.
-        Praesent imperdiet sed magna non finibus. Aenean blandit, mauris vitae lacinia rutrum,
+        Praesent imperdiet sed magna non finibus. Aenean blandit, mauris vitae lacinia rutrum, frgrg
         nunc mi scelerisque sem, in laoreet sem lectus ut orci. Ut egestas nulla in vehicula feugiat.
       </div>
 
@@ -117,8 +116,14 @@
           @before-close="beforeClose">
 
     <div class="darResolucion-modal-content">
-      <h3> Entregar Resolución </h3>
-      <textarea name="" id="" cols="100" rows="15"></textarea>
+      <h2> Entregar Resolución </h2>
+      
+      <form class="formRegistro" >
+        <div class="row col-md form-group">
+            <label> . </label>
+            <textarea class="form-control" id="razones" rows="10" required></textarea>
+        </div>       
+      </form>
 
       <button class="registrarR" > Aceptar </button>
     </div>
@@ -146,8 +151,8 @@
           @before-close="beforeClose">
 
     <div class="resolucion-modal-content">
-      <h3> Resolución </h3>
-            <div>
+      <h2> Resolución </h2>
+      <div>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dictum purus egestas libero ornare venenatis.
         Maecenas pharetra tortor eu tortor imperdiet, a faucibus quam finibus. Nulla id lacinia quam.
         Praesent imperdiet sed magna non finibus. Aenean blandit, mauris vitae lacinia rutrum,
